@@ -28,9 +28,13 @@ window.addEventListener("DOMContentLoaded", function() {
                 ul.appendChild(li);
                 main.appendChild(ul);
                 
+                let secondUl = document.createElement("ul");
+                let secondLi = document.createElement("li");
                 let img = document.createElement("img");
                 img.setAttribute("src", albumPhoto[i].thumbnailUrl);
-                li.appendChild(img);
+                secondLi.appendChild(img);
+                secondUl.appendChild(secondLi);
+                li.appendChild(secondUl);
             });
         }
     });
